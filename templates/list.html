@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+   <head>
+   <style>
+  body{
+    
+    background: url(../static/backgrnd.jpg) no-repeat 0px 0px;
+    background-attachment:fixed;
+   background-size:cover;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0em 0;
+}
+.going input[type="submit"] {
+    color: #ffffff;
+    font-size: .9em;
+    text-decoration: none;
+    padding: 1em 2em;
+    cursor: pointer;
+    background: #F44336;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    border: solid 1px #f44336;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.going{
+   align-self: center;
+   align-items: center;
+   margin-left: 550px;
+   margin-top: 40px;
+
+}
+.table_tt{
+   margin-top: 05px;
+   align-items: center;
+   align-content: center;
+}
+   #thead1{
+   font-size:1em;
+   padding:10px 40px;
+   background: #663300;
+   color:#212121;
+}
+#tr1{
+   font-size:1em;
+   min-height: 50px;
+   background: #996600;
+   color:#212121;
+   margin-bottom: 45px;
+}
+.tt{
+   align-content: center;
+      align-items: center;
+   margin: auto auto;
+   padding: 10px 10px 10px 10px;
+   table-layout: fixed;
+
+}
+.tt td{
+
+   padding: 10px 10px 10px 10px;
+   text-align: center;
+   min-height: 50px;
+   font-size: 1em;
+    letter-spacing: 2px;
+    color: #fff;
+    word-wrap: break-word;
+    text-transform: uppercase;
+    font-family: 'Tulpen One', cursive;
+    font-weight: 600;
+    margin:10px 10px 10px 10px;
+}
+table{
+   table-layout: fixed;
+   
+}
+
+   </style>
+
+   </head>
+   <body>
+   <div class="going">
+   <a href="/"><input type="submit" value="Go Back Home"></a>
+   </div>
+   <div class="table_tt">
+      <table class="tt" width="1200">
+         <thead id="thead1">
+            <td width="40">ID</td>
+            <td width="120">Name</td>
+            <td width="100">Date</td>
+            <td width="120">Topic</td>
+            <td width="400">............Description............</td>
+            <td width="120">Remark</td>
+            <td width="120">VName</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr id="tr1">
+               <td>{{row["ID"]}}</td>
+               <td>{{row["sn"]}}</td>
+               <td>{{row["dd"]}}</td>
+               <td> {{ row["topic"]}}</td>
+               <td height="auto">{{row['description']}}</td>
+               <td>{{row["remark"]}}</td>
+               <td>{{row["vn"]}}</td>	
+            </tr>
+         {% endfor %}
+      </table>
+   </div>
+   <div class="going">
+   <a href="/"><input type="submit" value="Go Back Home"></a>
+   </div>
+   </body>
+</html>
+

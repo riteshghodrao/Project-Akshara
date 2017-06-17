@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+   <style>
+      
+
+   </style>
+   <body>
+   
+      <table border = 1>
+         <thead id="thead">
+            <td>Name</td>
+            <td>Date</td>
+            <td>Topic</td>
+            <td>Description</td>
+            <td>Remark</td>
+            <td>Volunteer's Name</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["sn"]}}</td>
+               <td>{{row["dd"]}}</td>
+               <td> {{ row["topic"]}}</td>
+               <td>{{row['description']}}</td>
+               <td>{{row["remark"]}}</td>
+               <td>{{row["vn"]}}</td>	
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+      
+   </body>
+</html>
